@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            width: 400px;
+            height: 500px;
+            background-color: aqua;
+            position: relative;
+            top: 120px;
+            left: 570px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 10px groove white;
+            border-radius: 15px;
+        }
+        #display{
+            width: 280px;
+            height: 30px;
+            position: relative;
+            bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            font-size: 25px;
+            padding: 5px;
+            box-shadow: 5px 5px 10px black;
+        }
+        #display:hover{
+            background-color: rgb(180, 247, 114);
+        }
+        .a{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            color: rgb(247, 165, 179);
+            position: relative;
+            bottom: 8px;
+            box-shadow: 2px 2px 5px black;
+            margin-left: 15px;
+            border-radius: 15px;
+            font-size: 20px;
+
+        }
+        .b{
+            width: 120px;
+            height: 50px;
+            background-color: black;
+            color:  rgb(247, 165, 179);
+            margin-left: 15px;
+            border-radius: 15px;
+            font-size: 20px;
+            box-shadow: 5px 5px 5px black;
+            
+        }
+        .a:hover{
+            background-color: palevioletred;
+            color: black;
+            transition: background-color 1s,color 1s;
+        }
+        .b:hover{
+            background-color: palevioletred;
+            color: black;
+            transition: background-color 1s, color 1s;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form name="calc">
+            <input id="display" name="Answer"><br><br>
+            <input type="button" value="1" onclick="calc.Answer.value += '1'" class="a">
+            <input type="button" value="2" onclick="calc.Answer.value += '2'" class="a">
+            <input type="button" value="3" onclick="calc.Answer.value += '3'" class="a">
+            <input type="button" value="+" onclick="calc.Answer.value += '+'" class="a"><br><br>
+            <input type="button" value="4" onclick="calc.Answer.value += '4'" class="a">
+            <input type="button" value="5" onclick="calc.Answer.value += '5'" class="a">
+            <input type="button" value="6" onclick="calc.Answer.value += '6'" class="a">
+            <input type="button" value="-" onclick="calc.Answer.value += '-'" class="a"><br><br>
+            <input type="button" value="7" onclick="calc.Answer.value += '7'" class="a">
+            <input type="button" value="8" onclick="calc.Answer.value += '8'" class="a">
+            <input type="button" value="9" onclick="calc.Answer.value += '9'" class="a">
+            <input type="button" value="*" onclick="calc.Answer.value += '*'" class="a"><br><br>
+            <input type="button" value="0" onclick="calc.Answer.value += '0'" class="a">
+            <input type="button" value="." onclick="calc.Answer.value += '.'" class="a">
+            <input type="button" value="%" onclick="calc.Answer.value += '%'" class="a">
+            <input type="button" value="/" onclick="calc.Answer.value += '/'" class="a"><br><br>
+            <input type="button" value="Clear" onclick="calc.Answer.value = ' '" class="b">
+            <input type="button" value="=" onclick="calc.Answer.value = eval(calc.Answer.value)" class="b">
+        </form>
+    </div>
+</body>
+</html>
